@@ -1,39 +1,39 @@
-function myFunction() {
-  document.getElementById("recipeList").classList.toggle("show");
+/* When the user clicks on the button, toggle between hiding and showing the dropdown content */
+function MenuFunction() {
+  document.getElementById("MenuDropdown").classList.toggle("show");
 }
 
-
-// Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.recipebtn')) {
-    var recipe = document.getElementsByClassName("recipe-menu-content");
-    var i;
-    for (i = 0; i < recipe.length; i++) {
-      var openRecipe = recipe[i];
-      if (openRecipe.classList.contains('show')) {
-        openRecipe.classList.remove('show');
-      }
-    }
-  }
-}
-
-function thisFunction() {
-  document.getElementById("menuList").classList.toggle("show");
-}
+// Close the dropdown menu if the user clicks outside of it
 window.onclick = function(event) {
   if (!event.target.matches('.menubtn')) {
-    var recipe = document.getElementsByClassName("menu-list-content");
+    var dropdowns = document.getElementsByClassName("menu-content");
     var i;
-    for (i = 0; i < recipe.length; i++) {
-      var openMenu = menu[i];
-      if (openMenu.classList.contains('show')) {
-        openMenu.classList.remove('show');
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+} 
+
+function RecipeFunction() {
+  document.getElementById("RecipeDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.recipebtn')) {
+    var dropdowns = document.getElementsByClassName("recipe-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
       }
     }
   }
 }
-
-
 
 document.addEventListener('DOMContentLoaded', function(){
     document.getElementById("(form)")
@@ -68,3 +68,6 @@ document.addEventListener('DOMContentLoaded', function(){
         }
 
     };
+
+
+
